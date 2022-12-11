@@ -4,12 +4,10 @@ body{
 	margin: 0;
 }
 #wrapper{
-	min-width:320px;
-	min-height:480px;
-	max-width:768px;
-	max-height:1024px;
-	margin:0 auto;
-	padding:0;
+  width: 320px;
+	height: 480px;
+	margin: 0 auto;
+	padding: 0;
 	background-color: rgba(0,0,0,0.15);
 }
 .container{
@@ -20,17 +18,22 @@ body{
 	background-color:rgba(0, 0, 0, 0.15);
 }
 #lvlgenBox{
-	display: none;
-	opacity:0;
-	position:absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	opacity: 0;
+  pointer-events: none;
+	position: absolute;
 	top:0;
 	left:0;
-	width:0px;
-	height:0px;
+	width: 100%;
+	height: 100vh;
 	line-height: 1;
 }
 #lvlgenBox p{
-	font-size:0;
+  font-size: 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	text-align: center;
 	color: #554996;
 	text-shadow:-5px 5px 10px rgba(0,0,0,0.5);
@@ -76,7 +79,8 @@ body{
 }
 #display{
 	min-height: 190px;
-	display: none;
+	/* display: none; */
+  transform: translate(0px, 190px);
 	position: absolute;
 	top:0;/*change 190 to %%*/
 	left: 0;
@@ -408,7 +412,11 @@ p,ul{
 li{
 	list-style-type: none;
 }
-#levelsBox{
+#levelsBox {
+  box-sizing: border-box;
+  transform: translateY(-100vh);
+  height: 100vh;
+  width: 100%;
 	color: #FFEA00;
     font-weight: bold;
     text-align: center;
@@ -428,7 +436,7 @@ li{
 	z-index: 90;
 	width: 100%;
 	height: 100%;
-	display: none;
+	transform: translateY(-100vh);
 }
 #levelsBox ul{
 	margin:0 auto 10px;
@@ -500,17 +508,20 @@ li{
 	overflow: scroll;
 	background-color:rgba(255,255,255,0.05);
 	position: absolute;
-	top: 10px;
+	top: 0px;
 	left: 0px;
 	z-index: 99;
-	display: none;
+
 	border-radius: 10px;
 	padding: 10px;
 	box-shadow: 
 			  0px 0px 100px 0px rgba(0,0,0,0.5);	
 }
 #helpBox{
-
+  box-sizing: border-box;
+  transform: translateY(-100vh);
+  height: 100vh;
+  width: 100%;
 }
 #helpBoxbg{
 	background-color: rgba(0,0,0,0.35);
@@ -520,7 +531,7 @@ li{
 	z-index: 90;
 	width: 100%;
 	height: 100%;
-	display: none;
+  transform: translateY(-100vh);
 }
 .helpBoxes{
 	position: relative;
